@@ -88,6 +88,37 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
+		045A69F42E93FC8900059735 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		045A69F52E93FC9300059735 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		045A69F62E93FCA000059735 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				04691C392E93E5DB0004544B /* ViewController.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		045A69F72E93FCC100059735 /* Delegate */ = {
+			isa = PBXGroup;
+			children = (
+				04691C372E93E5C60004544B /* SceneDelegate.swift */,
+				04691C352E93E3A30004544B /* AppDelegate.swift */,
+			);
+			path = Delegate;
+			sourceTree = "<group>";
+		};
 		04691BFA2E93E0660004544B = {
 			isa = PBXGroup;
 			children = (
@@ -111,6 +142,10 @@
 		04691C052E93E0660004544B /* Currency_Converter */ = {
 			isa = PBXGroup;
 			children = (
+				045A69F72E93FCC100059735 /* Delegate */,
+				045A69F62E93FCA000059735 /* Views */,
+				045A69F52E93FC9300059735 /* ViewModels */,
+				045A69F42E93FC8900059735 /* Services */,
 				045A69F22E93F86300059735 /* Models */,
 				04691C062E93E0660004544B /* Currency_ConverterApp.swift */,
 				04691C082E93E0660004544B /* ContentView.swift */,
@@ -118,9 +153,6 @@
 				04691C0F2E93E0690004544B /* Persistence.swift */,
 				04691C112E93E0690004544B /* Currency_Converter.xcdatamodeld */,
 				04691C0C2E93E0690004544B /* Preview Content */,
-				04691C352E93E3A30004544B /* AppDelegate.swift */,
-				04691C372E93E5C60004544B /* SceneDelegate.swift */,
-				04691C392E93E5DB0004544B /* ViewController.swift */,
 			);
 			path = Currency_Converter;
 			sourceTree = "<group>";

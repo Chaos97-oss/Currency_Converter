@@ -8,13 +8,10 @@
 import SwiftUI
 
 @main
-struct Currency_ConverterApp: App {
-    let persistenceController = PersistenceController.shared
-
+struct Currency_converterApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
-                .environment(\.managedObjectContext, persistenceController.container.viewContext)
+            ConverterView()
         }
     }
 }

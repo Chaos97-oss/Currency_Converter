@@ -6,41 +6,62 @@
 //
 
 import Foundation
-
 import SwiftUI
-
 
 struct ConverterView: View {
     @StateObject private var viewModel = ConverterViewModel()
+    @State private var showChart = false   // <-- navigation trigger
+    let sampleData = [
+        CurrencyRate(base: "EUR", target: "USD", rate: 1.09, date: Date().addingTimeInterval(-86400 * 3)),
+        CurrencyRate(base: "EUR", target: "USD", rate: 1.10, date: Date().addingTimeInterval(-86400 * 2)),
+        CurrencyRate(base: "EUR", target: "USD", rate: 1.11, date: Date().addingTimeInterval(-86400 * 1)),
+        CurrencyRate(base: "EUR", target: "USD", rate: 1.13, date: Date())
+    ]
+
 
     var body: some View {
         ZStack {
-            // ---> Plain white background so the blue title is readable
-            Color.white
-                .ignoresSafeArea()
+            Color.white.ignoresSafeArea()
 
             VStack(spacing: 20) {
+                // ---- HEADER ----
                 HStack {
+                    // Left: Hamburger menu
+                    Menu {
+                        // Dropdown option(s)
+                        Button {
+                            showChart = true
+                        } label: {
+                            Label("Charts", systemImage: "chart.line.uptrend.xyaxis")
+                        }
+
+                    } label: {
+                        Image(systemName: "line.3.horizontal")
+                            .font(.title2)
+                            .foregroundColor(.green)
+                            .padding(.trailing, 4)
+                    }
+
                     Text("Currency\nCalculator.")
                         .font(.system(size: 30, weight: .bold))
-                        .foregroundColor(Color.blue)     // blue title visible on white bg
+                        .foregroundColor(Color.blue)
+
                     Spacer()
+
                     Button("Sign up") {}
                         .foregroundColor(Color.green)
                         .font(.system(size: 16, weight: .medium))
                 }
                 .padding(.horizontal)
 
-                // Main Card
+                // ---- MAIN CARD ----
                 VStack(spacing: 20) {
-                    // Amount input
                     TextField("Amount", text: $viewModel.inputAmount)
                         .keyboardType(.decimalPad)
                         .padding()
                         .background(Color(.systemGray6))
                         .cornerRadius(10)
 
-                    // Currency pickers / swap icon
                     HStack {
                         Picker("From", selection: $viewModel.baseCurrency) {
                             Text("EUR").tag("EUR")
@@ -61,7 +82,6 @@ struct ConverterView: View {
                         .pickerStyle(.menu)
                     }
 
-                    // Convert button
                     Button {
                         Task { await viewModel.convert() }
                     } label: {
@@ -73,7 +93,6 @@ struct ConverterView: View {
                             .cornerRadius(12)
                     }
 
-                    // Result / Loading / Error
                     if viewModel.isLoading {
                         ProgressView()
                     } else if !viewModel.result.isEmpty {
@@ -89,13 +108,12 @@ struct ConverterView: View {
                             .font(.caption)
                     }
 
-                    // Exchange rate info
                     Text("Mid-market exchange rate at 13:38 UTC")
                         .font(.caption)
                         .foregroundColor(.blue)
                 }
                 .padding()
-                .background(Color.white) // keep card white but separated by shadow
+                .background(Color.white)
                 .cornerRadius(25)
                 .shadow(color: Color.black.opacity(0.08), radius: 10, x: 0, y: 4)
                 .padding(.horizontal, 20)
@@ -103,6 +121,10 @@ struct ConverterView: View {
                 Spacer()
             }
             .padding(.top, 40)
+        }
+        // Navigation destination (takes user to chart view)
+        .navigationDestination(isPresented: $showChart) {
+            RateChartView(data: sampleData)
         }
     }
 }

@@ -13,19 +13,24 @@ struct RateChartView: View {
     let data: [CurrencyRate]
 
     var body: some View {
-        Chart(data) {
-            LineMark(
-                x: .value("Date", $0.date),
-                y: .value("Rate", $0.rate)
-            )
-            PointMark(
-                x: .value("Date", $0.date),
-                y: .value("Rate", $0.rate)
-            )
+        VStack {
+            Text("Exchange Rate Chart")
+                .font(.title2)
+                .bold()
+                .padding()
+
+            Chart(data) { rate in
+                LineMark(
+                    x: .value("Date", rate.date),
+                    y: .value("Rate", rate.rate)
+                )
+            }
+            .frame(height: 250)
+            .padding()
+
+            Spacer()
         }
-        .frame(height: 200)
-        .padding()
-        .background(Color.blue.opacity(0.1))
-        .cornerRadius(12)
+        .navigationTitle("Charts")
+        .navigationBarTitleDisplayMode(.inline)
     }
 }

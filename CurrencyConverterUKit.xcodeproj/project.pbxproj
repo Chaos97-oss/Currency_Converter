@@ -17,6 +17,11 @@
 		04CA93522E9E6CEF0022392D /* CurrencyConverterUKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CA93512E9E6CEF0022392D /* CurrencyConverterUKitTests.swift */; };
 		04CA935C2E9E6CEF0022392D /* CurrencyConverterUKitUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CA935B2E9E6CEF0022392D /* CurrencyConverterUKitUITests.swift */; };
 		04CA935E2E9E6CEF0022392D /* CurrencyConverterUKitUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CA935D2E9E6CEF0022392D /* CurrencyConverterUKitUITestsLaunchTests.swift */; };
+		04CA936C2E9E6DFC0022392D /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = 04CA936B2E9E6DFC0022392D /* Realm */; };
+		04CA936E2E9E6DFC0022392D /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 04CA936D2E9E6DFC0022392D /* RealmSwift */; };
+		04CA93712E9E6EBA0022392D /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 04CA93702E9E6EBA0022392D /* Alamofire */; };
+		04CA93742E9E6F9A0022392D /* PromiseKit in Frameworks */ = {isa = PBXBuildFile; productRef = 04CA93732E9E6F9A0022392D /* PromiseKit */; };
+		04CA93772E9E6FFF0022392D /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = 04CA93762E9E6FFF0022392D /* SwiftyJSON */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +63,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04CA93712E9E6EBA0022392D /* Alamofire in Frameworks */,
+				04CA93742E9E6F9A0022392D /* PromiseKit in Frameworks */,
+				04CA936E2E9E6DFC0022392D /* RealmSwift in Frameworks */,
+				04CA93772E9E6FFF0022392D /* SwiftyJSON in Frameworks */,
+				04CA936C2E9E6DFC0022392D /* Realm in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -146,6 +156,13 @@
 			dependencies = (
 			);
 			name = CurrencyConverterUKit;
+			packageProductDependencies = (
+				04CA936B2E9E6DFC0022392D /* Realm */,
+				04CA936D2E9E6DFC0022392D /* RealmSwift */,
+				04CA93702E9E6EBA0022392D /* Alamofire */,
+				04CA93732E9E6F9A0022392D /* PromiseKit */,
+				04CA93762E9E6FFF0022392D /* SwiftyJSON */,
+			);
 			productName = CurrencyConverterUKit;
 			productReference = 04CA93342E9E6CEC0022392D /* CurrencyConverterUKit.app */;
 			productType = "com.apple.product-type.application";
@@ -218,6 +235,12 @@
 				Base,
 			);
 			mainGroup = 04CA932B2E9E6CEC0022392D;
+			packageReferences = (
+				04CA936A2E9E6DFC0022392D /* XCRemoteSwiftPackageReference "realm-swift" */,
+				04CA936F2E9E6EB90022392D /* XCRemoteSwiftPackageReference "Alamofire" */,
+				04CA93722E9E6F9A0022392D /* XCRemoteSwiftPackageReference "PromiseKit" */,
+				04CA93752E9E6FFF0022392D /* XCRemoteSwiftPackageReference "SwiftyJSON" */,
+			);
 			productRefGroup = 04CA93352E9E6CEC0022392D /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -606,6 +629,69 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		04CA936A2E9E6DFC0022392D /* XCRemoteSwiftPackageReference "realm-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/realm/realm-swift.git";
+			requirement = {
+				kind = exactVersion;
+				version = 10.41.0;
+			};
+		};
+		04CA936F2E9E6EB90022392D /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = exactVersion;
+				version = 5.6.4;
+			};
+		};
+		04CA93722E9E6F9A0022392D /* XCRemoteSwiftPackageReference "PromiseKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/mxcl/PromiseKit.git";
+			requirement = {
+				kind = exactVersion;
+				version = 6.17.1;
+			};
+		};
+		04CA93752E9E6FFF0022392D /* XCRemoteSwiftPackageReference "SwiftyJSON" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SwiftyJSON/SwiftyJSON.git";
+			requirement = {
+				kind = exactVersion;
+				version = 5.0.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		04CA936B2E9E6DFC0022392D /* Realm */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 04CA936A2E9E6DFC0022392D /* XCRemoteSwiftPackageReference "realm-swift" */;
+			productName = Realm;
+		};
+		04CA936D2E9E6DFC0022392D /* RealmSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 04CA936A2E9E6DFC0022392D /* XCRemoteSwiftPackageReference "realm-swift" */;
+			productName = RealmSwift;
+		};
+		04CA93702E9E6EBA0022392D /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 04CA936F2E9E6EB90022392D /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+		04CA93732E9E6F9A0022392D /* PromiseKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 04CA93722E9E6F9A0022392D /* XCRemoteSwiftPackageReference "PromiseKit" */;
+			productName = PromiseKit;
+		};
+		04CA93762E9E6FFF0022392D /* SwiftyJSON */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 04CA93752E9E6FFF0022392D /* XCRemoteSwiftPackageReference "SwiftyJSON" */;
+			productName = SwiftyJSON;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		04CA93402E9E6CEC0022392D /* CurrencyConverterUKit.xcdatamodeld */ = {

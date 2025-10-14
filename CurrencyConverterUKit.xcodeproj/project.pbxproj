@@ -22,6 +22,7 @@
 		04CA93712E9E6EBA0022392D /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 04CA93702E9E6EBA0022392D /* Alamofire */; };
 		04CA93742E9E6F9A0022392D /* PromiseKit in Frameworks */ = {isa = PBXBuildFile; productRef = 04CA93732E9E6F9A0022392D /* PromiseKit */; };
 		04CA93772E9E6FFF0022392D /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = 04CA93762E9E6FFF0022392D /* SwiftyJSON */; };
+		04CA93802E9E761A0022392D /* CurrencyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CA937F2E9E761A0022392D /* CurrencyViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +57,7 @@
 		04CA93572E9E6CEF0022392D /* CurrencyConverterUKitUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CurrencyConverterUKitUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		04CA935B2E9E6CEF0022392D /* CurrencyConverterUKitUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyConverterUKitUITests.swift; sourceTree = "<group>"; };
 		04CA935D2E9E6CEF0022392D /* CurrencyConverterUKitUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyConverterUKitUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		04CA937F2E9E761A0022392D /* CurrencyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +117,7 @@
 				04CA93392E9E6CEC0022392D /* SceneDelegate.swift */,
 				04CA933B2E9E6CEC0022392D /* ViewController.swift */,
 				04CA933D2E9E6CEC0022392D /* Main.storyboard */,
+				04CA937F2E9E761A0022392D /* CurrencyViewController.swift */,
 				04CA93432E9E6CEE0022392D /* Assets.xcassets */,
 				04CA93452E9E6CEE0022392D /* LaunchScreen.storyboard */,
 				04CA93482E9E6CEE0022392D /* Info.plist */,
@@ -288,6 +291,7 @@
 				04CA93382E9E6CEC0022392D /* AppDelegate.swift in Sources */,
 				04CA93422E9E6CEC0022392D /* CurrencyConverterUKit.xcdatamodeld in Sources */,
 				04CA933A2E9E6CEC0022392D /* SceneDelegate.swift in Sources */,
+				04CA93802E9E761A0022392D /* CurrencyViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -1,0 +1,39 @@
+
+/* Class = "UIButton"; configuration.title = "☰"; ObjectID = "7jt-VT-aNz"; */
+"7jt-VT-aNz.configuration.title" = "☰";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "7jt-VT-aNz"; */
+"7jt-VT-aNz.normalTitle" = "Button";
+
+/* Class = "UITextField"; text = "Enter Amount"; ObjectID = "CJE-GL-hXm"; */
+"CJE-GL-hXm.text" = "Enter Amount";
+
+/* Class = "UILabel"; text = "Results will appear here"; ObjectID = "Nej-Sa-SdV"; */
+"Nej-Sa-SdV.text" = "Results will appear here";
+
+/* Class = "UILabel"; text = "Mid-Market Exchange Rate"; ObjectID = "k8i-2E-Z59"; */
+"k8i-2E-Z59.text" = "Mid-Market Exchange Rate";
+
+/* Class = "UIButton"; configuration.title = "NGN"; ObjectID = "mp2-1T-4c7"; */
+"mp2-1T-4c7.configuration.title" = "NGN";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "mp2-1T-4c7"; */
+"mp2-1T-4c7.normalTitle" = "Button";
+
+/* Class = "UIButton"; configuration.title = "Sign Up"; ObjectID = "qRS-yl-HZa"; */
+"qRS-yl-HZa.configuration.title" = "Sign Up";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "qRS-yl-HZa"; */
+"qRS-yl-HZa.normalTitle" = "Button";
+
+/* Class = "UIButton"; configuration.title = "EUR"; ObjectID = "uDY-2E-3gU"; */
+"uDY-2E-3gU.configuration.title" = "EUR";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "uDY-2E-3gU"; */
+"uDY-2E-3gU.normalTitle" = "Button";
+
+/* Class = "UIButton"; configuration.title = "Convert"; ObjectID = "wyD-jB-IUW"; */
+"wyD-jB-IUW.configuration.title" = "Convert";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "wyD-jB-IUW"; */
+"wyD-jB-IUW.normalTitle" = "Button";

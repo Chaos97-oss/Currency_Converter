@@ -12,7 +12,10 @@ class CurrencyViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+//        backgroundCardView.layer.shadowColor = UIColor.black.cgColor
+//            backgroundCardView.layer.shadowOpacity = 0.1
+//            backgroundCardView.layer.shadowOffset = CGSize(width: 0, height: 4)
+//            backgroundCardView.layer.shadowRadius =
     }
     
 
